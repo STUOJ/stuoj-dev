@@ -10,6 +10,8 @@ STUOJ 开发文档。如果你有兴趣参与贡献代码，欢迎提交 Pull Re
 
 ## 编码规范
 
+- [名词与缩写解释](vocabulary.md)
 - [命名规则](naming_rules.md)
 - [书写风格](writing_style.md)
-- [名词与缩写解释](vocabulary.md)
+- [前端规范](frontend.md)
+- [后端规范](backend.md)

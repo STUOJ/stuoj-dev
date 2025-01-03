@@ -7,3 +7,7 @@ STUOJ 开发文档。如果你有兴趣参与贡献代码，欢迎提交 Pull Re
 ## 参与贡献
 
 ## 编码规范
+
+- [命名规则](naming_rules.md)
+- [书写风格](writing_style.md)
+- [名词与缩写解释](definition.md)

@@ -1,4 +1,4 @@
-# stuoj-dev
+# STUOJ 开发文档
 
 ## 仓库简介
 

@@ -73,7 +73,7 @@
 - valueobject:值对象，含有创建、校验等操作。
 - 领域对象:以数据库实体为基础的领域对象会包含校验、创建、更新、删除等函数；其他操作会包含该领域的接口定义，以及实现该接口的结构体（例：代码评测领域中包含了代码运行接口，并编写了judge0的防腐层实现该接口）。
 - 以数据库实体为基础的领域对象拥有由dto_gen.go生成的map[string]any转换到领域对象的方法；拥有由query_gen.go生成的查询方法，会返回领域对象、map[string]any和错误。
-- 以数据库实体为基础的领域对象可能会有extra.go定义的垮领域查询上下文方法，用于扩展查询操作（例：在problem中可使用QueryMaxScore方法得到QueryContextOption闭包，用于查询该用户在题目上的最好提交记录；在problem中可使用WhereTag得到QueryContextOption闭包，用于限制查询的题目必须包含所需tagId）。使用例（查询到的map_中将包含该用户的最好提交记录和该题目的tagId）：
+- 以数据库实体为基础的领域对象可能会有extra.go定义的跨领域查询上下文方法，用于扩展查询操作（例：在problem中可使用QueryMaxScore方法得到QueryContextOption闭包，用于查询该用户在题目上的最好提交记录；在problem中可使用WhereTag得到QueryContextOption闭包，用于限制查询的题目必须包含所需tagId）。使用例（查询到的map_中将包含该用户的最好提交记录和该题目的tagId）：
 ```
 _, map_, err := problem.Query.SelectOne(problemQuery, problem.QueryMaxScore(reqUser.ID), problem.QueryTag())
 ```
